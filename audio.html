@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>A/B Player</title>
+  <meta name="description" content="Toggle between two audio files to compare" />
+  <meta name="author" content="Matt Bartley" />
+
+  <meta property="og:title" content="A/B Audio Player" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Toggle between two audio files to compare" />
+  <meta property="og:image" content="image.png" />
+
+  <!-- <link rel="icon" href="/favicon.ico" /> -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <div id="intro">
+    <h1>A/B Player</h1>
+    <div id="tagline">
+      A zero-dependency HTML, CSS, Javascript audio player.
+    </div>
+
+    <a href="https://github.com/mattbartley/AB-Audio-Player" target="_blank"><i class="fa-brands fa-github"></i> Open
+      Source on GitHub</a>
+    <p>Toggle between two audio files to compare them side-by-side.</p>
+  </div>
+  <div id="audio-player" class="player_wrapper">
+    <div id="progress-container">
+      <div class="progress-bar" id="progress-fill"></div>
+      <span id="current-time">0:00</span>
+      <input type="range" id="seek-bar" value="0">
+      <span id="duration">0:00</span>
+    </div>
+    <div id="audio-controls">
+      <button id="play-pause"><i class="fas fa-play"></i></button>
+      <button id="toggle-fx" class="active">Turn FX ON</button>
+    </div>
+    <div class="audio-playlist">
+      <h2 class="h2">Playlist</h2>
+      <ul id="playlist">
+        <li data-src-a="https://testben.ams3.cdn.digitaloceanspaces.com/folder/song1-a.mp3"
+          data-src-b="you-can-do-more-108602.mp3">Song 1 <span
+            class="song-duration">12:26</span></li>
+        <li data-src-a="https://testben.ams3.cdn.digitaloceanspaces.com/folder/song2-a.mp3"
+        data-src-b="https://testben.ams3.cdn.digitaloceanspaces.com/folder/song2-b.mp3"
+        >Song 2<span
+            class="song-duration">12:26</span></li>
+        <li data-src-a="https://testben.ams3.cdn.digitaloceanspaces.com/folder/song3-a.mp3"
+        data-src-b="https://testben.ams3.cdn.digitaloceanspaces.com/folder/song3-b.mp3"
+        >Song 3<span
+            class="song-duration">12:26</span></li>
+      </ul>
+    </div>
+  </div>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
